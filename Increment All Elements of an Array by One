@@ -1,0 +1,45 @@
+import java.util.Scanner;
+public class increment {
+
+	public static void main(String[] args) {
+		
+		//Declared a Scanner class to get input from the user
+		Scanner input = new Scanner(System.in);
+		
+		//Defining array size---->
+		System.out.println("Enter Array size:");
+		int size = input.nextInt();
+		
+		//Declared an array---->
+		int array[]= new int[size];
+		
+		//Declaring a dummy array to store increment values
+		int dummy[]=new int[array.length];
+		
+		//Giving input in the array
+		System.out.println("Enter integer number in array:");
+		for(int i=0;i<array.length;i++) {
+			array[i]=input.nextInt();
+		}
+		//Printing array numbers before increment
+		System.out.print("Before Increment:");
+		for(int i=0;i<array.length;i++) {
+			System.out.print(array[i]+" ");
+		}
+		
+		//Storing increment numbers in dummy array--->
+		for(int i=0;i<array.length;i++) {
+			while(i<array.length) {
+				dummy[i]=array[i]+1;
+				i++;
+			}
+		}
+		//Printing numbers after increment--->
+		System.out.print("\n");
+		System.out.print("\nAfter Increment: ");
+		for(int i=0;i<dummy.length;i++) {
+			System.out.print(dummy[i]+" ");
+		}
+	}
+
+}
